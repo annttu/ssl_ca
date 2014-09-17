@@ -35,7 +35,7 @@ cd $name
 if [ ! -f "$name.key" ]
 then
 	cat ../$CLIENT_CNF |sed -e "s/commonName_default.*/commonName_default = ${host}/" > ${name}.cfg
-	openssl req -new -config ${name}.cfg $OPTIONS -out $name.csr -keyout $name.key -batch || exit 1
+	openssl req -new -sha256 -config ${name}.cfg $OPTIONS -out $name.csr -keyout $name.key -batch || exit 1
 fi
 #if [ ! -f "${name}_passless.key" ]
 #then
