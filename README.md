@@ -12,7 +12,7 @@ Clone repository
 Configure CHANGEME values.
 
     vim openssl.cnf
-    vim client.cnd
+    vim client.cnf
 
 Create CA, answer questions carefully.
 
