@@ -2,7 +2,7 @@
 
 function usage
 {
-	echo "$0 [-u (server|router|user)] [-b bits] fqdn"
+	echo "$0 [-u (server|user)] [-b bits] fqdn"
 	exit 1
 }
 
@@ -34,7 +34,7 @@ mkdir $name
 cd $name
 if [ ! -f "$name.key" ]
 then
-	cat ../$CLIENT_CNF |sed -e "s/commonName_default.*/commonName_default = ${host}/" > ${name}.cfg
+	cat ../$CONFIG |sed -e "s/commonName_default.*/commonName_default = ${host}/" > ${name}.cfg
 	openssl req -new -sha256 -config ${name}.cfg $OPTIONS -out $name.csr -keyout $name.key -batch || exit 1
 fi
 #if [ ! -f "${name}_passless.key" ]

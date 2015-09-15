@@ -33,7 +33,7 @@ crl		= $dir/crl.pem 		# The current CRL
 private_key	= $dir/ca.key           # The private key
 RANDFILE	= $dir/.rand		# private random number file
 
-x509_extensions	= usr_cert		# The extentions to add to the cert
+x509_extensions	= user_cert		# The extentions to add to the cert
 
 # Comment out the following two lines for the "traditional"
 # (and highly broken) format.
@@ -85,8 +85,8 @@ default_bits		= 4096
 default_keyfile 	= privkey.pem
 distinguished_name	= req_distinguished_name
 attributes		= req_attributes
-# Default to usr_cert
-x509_extensions         = usr_cert
+# Default to user_cert
+x509_extensions         = user_cert
 
 string_mask = utf8only
 
@@ -150,7 +150,7 @@ nsCertType			= server
 subjectKeyIdentifier=hash
 authorityKeyIdentifier=keyid,issuer
 
-[ usr_cert ]
+[ user_cert ]
 
 # User sertificate for OpenVPN clients
 
