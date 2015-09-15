@@ -9,14 +9,10 @@ Clone repository
     git clone https://github.com/annttu/ssl_ca.git
     cd ssl_ca
 
-Configure CHANGEME values.
+Run setup.sh.
 
-    vim openssl.cnf
-    vim client.cnf
+    ./setup.sh
 
-Create CA, answer questions carefully.
-
-    ./create_ca.sh
 
 
 ## Usage
